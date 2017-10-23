@@ -1,4 +1,6 @@
 javascript: (function() {
+  window.__glitch_runs = window.__glitch_runs ? window.__glitch_runs + 1 : 1;
+
   const transformTranspose = (header, input) => {
     const idx =
       header + Math.floor(Math.random() * (input.length - header - 1));
@@ -41,7 +43,7 @@ javascript: (function() {
           };
 
           const glitchOnce = () => {
-            const errors = Math.random() * 10;
+            const errors = Math.random() * 10 * window.__glitch_runs;
             let corrupted = data.slice(0);
             for (let i = 0; i < errors; i++) {
               corrupted = Math.random() > 0.5 ? transformTranspose(100, corrupted) : transformSubstitute(100, corrupted);
