@@ -120,7 +120,7 @@ javascript: (function() {
   const glitchText = n => {
     const original = n.textContent;
     const glitchText = () => {
-      n.textContent = transformText(original);
+      n.textContent = transformText(original).replace(/�/g, '');
     };
 
     const glitchTextTimeout = (max = 1000) => {
