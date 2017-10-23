@@ -56,6 +56,7 @@ javascript: (function() {
           };
 
           const glitchRaf = () => {
+            window.__glitch_runs = 3;
             glitchOnce();
             window.requestAnimationFrame(glitchRaf);
           };
