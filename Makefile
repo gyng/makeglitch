@@ -7,3 +7,7 @@ clean:
 	rm index.html
 	rm glitch.turbo.js.tmp
 	rm index.html.tmp
+
+cleantmp:
+	rm glitch.turbo.js.tmp
+	rm index.html.tmp
