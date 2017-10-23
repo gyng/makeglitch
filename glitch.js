@@ -18,6 +18,7 @@ javascript: (function() {
   const glitchImage = image => {
     try {
       image.onload = () => {};
+      image.style.backgroundColor = '#262626';
 
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
