@@ -55,6 +55,11 @@ javascript: (function() {
             image.src = corruptSrc;
           };
 
+          const glitchRaf = () => {
+            glitchOnce();
+            window.requestAnimationFrame(glitchRaf);
+          };
+
           const glitchTimeout = (max = 300) => {
             glitchOnce();
             window.setTimeout(() => {

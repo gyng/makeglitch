@@ -11,6 +11,7 @@ See [index.html](https://gyng.github.io/makeglitch/).
 ## Building `index.html`
 
     make
+    watch -n 0.5 make
 
 ## See also
 
