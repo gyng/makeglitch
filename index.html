@@ -33,6 +33,7 @@ javascript: (function() {
   const glitchImage = image => {
     try {
       image.onload = () => {};
+      image.style.backgroundColor = '#262626';
 
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
@@ -96,10 +97,10 @@ javascript: (function() {
       </strong>
 
       <p>ＳＣＲＥＥＮ　ＳＨＯＴ</p>
-      <div>
-        <img src="doc/demo1.jpg" style="max-width: 30%"></img>
-        <img src="doc/demo2.jpg" style="max-width: 30%"></img>
-        <img src="doc/demo3.jpg" style="max-width: 30%"></img>
+      <div style="max-width: 1366px;">
+        <img src="doc/demo1.jpg" style="width: 30%; height: 250px; object-fit: cover;"></img>
+        <img src="doc/demo2.jpg" style="width: 30%; height: 250px; object-fit: cover;"></img>
+        <img src="doc/demo3.jpg" style="width: 30%; height: 250px; object-fit: cover;"></img>
       </div>
 
       <p>※ＵＬＴＲＡ　ＧＲＡＰＨＩＣＳ　ＲＥＱＵＩＲＥＳ　Ａ　ＧＯＯＤ　ＢＬＩＴＴＥＲ　＆　ＦＵＮＣＴＩＯＮＩＮＧ　ＩＮＴＥＲＮＥＴ　ＣＯＮＮＥＣＴＩＯＮ　（２４００　ＢＡＵＤ　ＷＡＲＮＩＮＧ）</p>
