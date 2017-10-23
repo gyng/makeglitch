@@ -18,12 +18,12 @@ javascript: (function() {
     window.__glitch_runs = 3;
   }
 
-  const transformTranspose = (header, input) => {
+  const transformTranspose = (header, input, gap = 1) => {
     const idx =
-      header + Math.floor(Math.random() * (input.length - header - 1));
+      header + Math.floor(Math.random() * (input.length - header - gap));
     const tmp = input[idx];
-    input[idx] = input[idx + 1];
-    input[idx + 1] = tmp;
+    input[idx] = input[idx + gap];
+    input[idx + gap] = tmp;
     return input;
   };
 
@@ -41,7 +41,11 @@ javascript: (function() {
       bytes =
         Math.random() > 0.5
           ? transformSubstitute(0, bytes)
-          : transformTranspose(0, bytes);
+          : transformTranspose(
+            0,
+            bytes,
+            Math.floor(Math.random() * str.length - 1) + 1
+          );
     }
     const string = new TextDecoder('utf-8').decode(bytes);
     return string;
