@@ -1,4 +1,4 @@
-# maketerm
+# makeglitch
 
 A Javascript bookmarklet to make glitch images on webpages. Content security policies might prevent this from running on certain sites.
 
